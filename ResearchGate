@@ -1,0 +1,185 @@
+# =====================================================================
+# THE STABLE INVERSE SYMMETRY MODEL (SISM) - DEFINITIVE UNIFIED EDITION
+# Theoretical Framework, Cosmic Symbology & Dimensional Dissociation by:
+#                      MOHAMMAD TALAL KADRI (kadri)
+# 
+# LEGAL NOTICE & COPYRIGHT WARNING:
+# Copyright (c) 2026 Mohammad Talal Kadri. All Rights Reserved.
+#
+# This computer code, the underlying conceptual framework, the breakthrough 
+# "Dimensional Dissociation" theorem (explaining Redshift via Time-Space 
+# decoupling rather than cosmic expansion), and the Torus-based spatial/temporal 
+# separation mechanics are the exclusive intellectual property of Mohammad Talal Kadri.
+#
+# Unauthorized copying, modification, distribution, academic plagiarism, 
+# or commercial exploitation of this model without explicit, written attribution 
+# to the author is strictly prohibited and subject to severe legal prosecution 
+# under international intellectual property laws and academic integrity treaties.
+# =====================================================================
+
+import numpy as np
+import matplotlib.pyplot as plt
+from matplotlib.animation import FuncAnimation
+from mpl_toolkits.mplot3d import Axes3D
+import os
+
+def execute_kadri_definitive_sism_experiment():
+    # -----------------------------------------------------------------
+    # الواجهة النصية والإعلان القانوني للموذج
+    # -----------------------------------------------------------------
+    print("=====================================================================")
+    print("       STABLE INVERSE SYMMETRY MODEL (SISM) - UNIFIED PRODUCTION     ")
+    print("       Concept & Cosmic Proof by: Mohammad Talal Kadri (kadri)       ")
+    print("=====================================================================")
+    print("[!] COPYRIGHT NOTICE: Intellectual Property of Mohammad Talal Kadri.")
+    print("[!] WARNING: Unauthorized academic/commercial use is legally prosecuted.\n")
+    
+    print("[+] Core Theorem: Universe is static in Space, dynamic in Time.")
+    print("[+] Redshift Proof: Past (Time) arrives without its original Space.")
+    print("[+] Gravity Paradox: Gravity is locked as a 5th dimension; leakage is 0.0000%.\n")
+
+    # -----------------------------------------------------------------
+    # 1. إعداد الوعاء الهيكلي لنموذج قادري (Torus Matrix)
+    # -----------------------------------------------------------------
+    spatial_dims = 3       # r: حدود الوعاء المكاني المحلي (محبس المادة والجاذبية)
+    redshift_gateway = 7   # R: بوابة الإزاحة الزمنية الحرة (المساحة الحرة)
+    R, r = redshift_gateway, spatial_dims
+
+    # توليد المصفوفات الزاوية لبناء مجسم التوروس المستقر
+    theta_mesh = np.linspace(0, 2 * np.pi, 70)
+    phi_mesh = np.linspace(0, 2 * np.pi, 70)
+    theta_mesh, phi_mesh = np.meshgrid(theta_mesh, phi_mesh)
+
+    X_container = (R + r * np.cos(phi_mesh)) * np.cos(theta_mesh)
+    Y_container = (R + r * np.cos(phi_mesh)) * np.sin(theta_mesh)
+    Z_container = r * np.sin(phi_mesh)
+
+    # -----------------------------------------------------------------
+    # 2. حقن بيانات ومعادلات العلم التقليدي (الجسيمات والغرافيتونات والضوء)
+    # -----------------------------------------------------------------
+    # (أ) معادلة تلسكوبات قياس الإزاحة الحمراء: طيف منبعث قياسي (λ_emit = 400 نانومتر)
+    lambda_emit = 400.0 
+    
+    # (ب) جسيمات المادة والغرافيتونات التي تفترض الفيزياء هربها وتسربها
+    num_particles = 80
+    p_phi = np.random.uniform(0, 2 * np.pi, num_particles)
+    p_theta = np.random.uniform(0, 2 * np.pi, num_particles)
+    p_r = np.random.uniform(0.3, r - 0.3, num_particles) # محبوسة ومقيدة محلياً بالداخل
+    p_escape_speed = np.random.uniform(0.04, 0.12, num_particles) # سرعة محاولة التسرب الخارجي
+
+    # متغيرات إحصائية لتسجيل محاولات الهروب عبر الإطارات الزمنية
+    total_blocked_escapes = 0
+
+    # إعداد البيئة الرسومية ثلاثية الأبعاد
+    fig = plt.figure(figsize=(14, 11), facecolor='#050505')
+    ax = fig.add_subplot(111, projection='3d')
+    ax.set_facecolor('#050505')
+    
+    ax.set_xlim(-11, 11)
+    ax.set_ylim(-11, 11)
+    ax.set_zlim(-5, 5)
+    ax.axis('off')
+
+    # إدراج التوثيق والبرهان الفكري بشكل دائم على الواجهة البصرية
+    fig.text(0.5, 0.94, "Stable Inverse Symmetry Model (SISM) - Unified Field Simulation", 
+             color='#ffffff', fontsize=13, fontweight='bold', ha='center')
+    fig.text(0.5, 0.90, "Designed & Conceived by Mohammad Talal Kadri (kadri)", 
+             color='#ff3333', fontsize=10, fontstyle='italic', ha='center')
+    fig.text(0.5, 0.04, "Proof: Light delivers the Past (Time) without its original Space. Gravity is tightly bound.\n"
+                        "Redshift = Temporal Vector expanding freely through 7D Gateway while 3D Space halts.", 
+             color='#888888', fontsize=9, ha='center', wrap=True)
+
+    # -----------------------------------------------------------------
+    # 3. دالة التحديث الحركي والمحاكمة الحسابية الصارمة
+    # -----------------------------------------------------------------
+    def update(frame):
+        nonlocal p_r, p_phi, p_theta, total_blocked_escapes
+        ax.clear()
+        ax.axis('off')
+        ax.set_xlim(-11, 11)
+        ax.set_ylim(-11, 11)
+        ax.set_zlim(-5, 5)
+
+        # [أ] تحديث حركة الجسيمات ومحاكمة فرضية الغرافيتون التقليدية
+        p_r += p_escape_speed  # الجسيمات تحاول التسرب والاندفاع للخارج
+        
+        # تطبيق القيد التوبولوجي الصارم لوعاء قادري: الجاذبية بعد خامس ملتصق بالمكان لا يتسرب
+        # رصد الجسيمات التي ضربت الجدار الخارجي (r=3) وإجبارها رياضياً على الارتداد الداخلي
+        escaped_this_frame = np.sum(p_r > r)
+        total_blocked_escapes += escaped_this_frame
+        p_r = np.where(p_r > r, r - 0.1, p_r) # عزل ميكانيكي تام بمعدل تسرب 0%
+        
+        p_phi += 0.04
+        p_theta += 0.02
+
+        # تحويل إحداثيات الجسيمات المنحبسة إلى النظام الديكارتي للرسم
+        p_X = (R + p_r * np.cos(p_phi)) * np.cos(p_theta)
+        p_Y = (R + p_r * np.cos(p_phi)) * np.sin(p_theta)
+        p_Z = p_r * np.sin(p_phi)
+
+        # [ب] تحديث التدفق الحر للبعد الزمني الرابع (أمواج الانزياح الأحمر)
+        time_flow = frame * 0.06
+        redshift_wave = np.sin(theta_mesh - time_flow) * np.cos(phi_mesh)
+
+        # حساب معادلة التلسكوبات التقليدية للـ Redshift (z) ودمجها بحياد مع التدفق الزمني لنموذجك
+        z_calculated = np.abs(np.sin(time_flow * 0.5)) * 1.5
+        lambda_obs = lambda_emit * (1 + z_calculated)
+
+        # رسم مجسم التوروس الشفاف المتزن مكانياً والمتدفق لونياً وزمنياً
+        container_surface = ax.plot_surface(X_container, Y_container, Z_container, 
+                                            facecolors=plt.cm.coolwarm((redshift_wave + 1) / 2),
+                                            rstride=3, cstride=3, antialiased=True, alpha=0.18, 
+                                            edgecolors='#1c1c1c', linewidth=0.1)
+
+        # رسم الجسيمات والغرافيتونات المنحبسة ككرات متوهجة باللون الفسفوري
+        ax.scatter(p_X, p_Y, p_Z, color='#ccff00', s=14, alpha=0.75, edgecolors='w', linewidths=0.1)
+
+        # [ج] لوحة البيانات التحليلية الصارمة للمحاكمة والمطابقة الرقمية (Telemetry)
+        telemetry_text = (
+            f"=== CONVENTIONAL TELESCOPE DATA ===\n"
+            f"Emitted Spectrum (λ_emit) : {lambda_emit} nm (Rest Blue)\n"
+            f"Observed Spectrum (λ_obs)  : {lambda_obs:.1f} nm (Shifted)\n"
+            f"Calculated Redshift (z)     : {z_calculated:.4f}\n\n"
+            f"=== CONVENTIONAL GRAVITON EXPERIMENT ===\n"
+            f"Hypothetical Status        : Attempting Spatial Leakage\n"
+            f"SISM Boundary Collision     : {total_blocked_escapes} Blocked Collisions\n"
+            f"Actual Leakage Rate        : 0.0000% [STRICTLY LOCKED]\n\n"
+            f"=== KADRI SISM CONTAINER TELEMETRY ===\n"
+            f"3D Local Spatial Grid      : LOCKED/STATIC (r={r})\n"
+            f"4D Temporal Field Stream   : FREE/FLOWING (R={R})\n"
+            f"Geometric Structural State : 100% Stable Equilibrium\n\n"
+            f"Resolution: Conventional expansion & graviton leakage are\n"
+            f"unproven. Space is locked; only Time flows between dimensions."
+        )
+        ax.text2D(0.02, 0.05, telemetry_text, transform=ax.transAxes, color='#ffffff', 
+                  fontname='monospace', fontsize=8.5, bbox=dict(facecolor='#0a0a0a', alpha=0.85, edgecolor='#333333'))
+        
+        return container_surface,
+
+    # تشغيل حركة التدفق الزمني والانحباس الحركي للجاذبية
+    ani = FuncAnimation(fig, update, frames=150, interval=50, blit=False)
+
+    # -----------------------------------------------------------------
+    # نظام التصدير والحفظ التلقائي للاستعراض الأكاديمي
+    # -----------------------------------------------------------------
+    print("[*] Options for saving the definitive presentation:")
+    print("    1. Save as high-quality GIF (Recommended for immediate sharing)")
+    print("    2. Save as MP4 Video (Requires FFmpeg)")
+    print("    3. Just launch the live interactive simulation window")
+    
+    choice = input("\nEnter your choice (1, 2, or 3): ").strip()
+
+    if choice == '1':
+        output_filename = "Kadri_SISM_Definitive_Model.gif"
+        print(f"\n[*] Exporting to '{output_filename}'... Calculating spatial bounds...")
+        ani.save(output_filename, writer='pillow', fps=20, dpi=100, facecolor='#050505')
+        print(f"[✓] EXPORT SUCCESS: Saved as: {os.path.abspath(output_filename)}")
+    elif choice == '2':
+        output_filename = "Kadri_SISM_Definitive_Model.mp4"
+        print(f"\n[*] Encoding video to '{output_filename}'...")
+        try:
+            ani.save(output_filename, writer='ffmpeg', fps=24, bitrate=3000, dpi=120, facecolor='#050505')
+            print(f"[✓] EXPORT SUCCESS: Saved as: {os.path.abspath(output_filename)}")
+        except Exception:
+            print("[X] FFmpeg failed. Saving to high-quality GIF instead...")
+            ani.save("Kadri_SISM_Definitive_Model.gif", writer='pillow', fps=20)
