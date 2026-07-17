@@ -1,4 +1,4 @@
- ريد مي 
+  
 # The Stable Inverse Symmetry Model (SISM)
 ### A Theoretical Framework on Dimensional Dissociation and Cosmic Equilibrium
 **Conceived and Formulated by:** Mohammad Talal Kadri (kadri)  
