@@ -1,4 +1,6 @@
 """
+![SISM Visual Map]![SISM Visual Map]
+
 =========================================================================================
 SISM MATRIX SPECIFICATION: TOPOLOGICAL DISSECTING OF THE 7-DIMENSIONAL SYSTEM (R=7)
 =========================================================================================
